@@ -1,10 +1,10 @@
 ---
-title_meta  : Chapter 1
-title       : Python Basics
-description : An introduction to the basic concepts of Python. Learn how to use Python both interactively and through a script. Create your first variables and acquaint yourself with Python's basic data types.
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch1_slides.pdf
-
+  title_meta: "Chapter 1"
+  title: "Python Basics"
+  description: "An introduction to the basic concepts of Python. Learn how to use Python both interactively and through a script. Create your first variables and acquaint yourself with Python's basic data types."
+  attachments: 
+    slides_link: "https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch1_slides.pdf"
+  v2: true
 
 ---
 ## Hello Python!
@@ -15,19 +15,15 @@ lang: python
 xp: 50
 skills: 2
 key: d5509896f7
+video_link: //player.vimeo.com/video/146994261
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch1_1.master.m3u8
+
 ```
 
-`@video_link`
-//player.vimeo.com/video/146994261
-
-`@video_hls`
-//videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch1_1.master.m3u8
-
-*** =projector_key
+`@projector_key`
 5f61a677bf62c17b450465ee849823ee
 
 ---
-
 ## The Python Interface
 
 ```yaml
@@ -36,6 +32,9 @@ lang: python
 xp: 100
 skills: 2
 key: bdc52f0e19
+
+
+
 ```
 
 In the Python script on the right, you can type Python code to solve the exercises. If you hit _Run Code_ or _Submit Answer_, your python script (`script.py`) is executed and the output is shown in the IPython Shell. _Submit Answer_ checks whether your submission is correct and gives you feedback.
@@ -56,16 +55,13 @@ Simply add `print(7 + 10)` in the script on the right and hit 'Submit Answer'.
 ```{python}
 # pec comes here
 ```
-
 `@sample_code`
 ```{python}
 # Example, do not modify!
 print(5 / 8)
 
 # Put code below here
-
 ```
-
 `@solution`
 ```{python}
 # Example, do not modify!
@@ -74,7 +70,6 @@ print(5 / 8)
 # Put code below here
 print(7 + 10)
 ```
-
 `@sct`
 ```{python}
 msg = "Don't remove the first statement. It is an example which is coded for you!"
@@ -85,6 +80,11 @@ test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
 success_msg("Great!")
 ```
 
+
+
+
+
+
 ---
 ## When to use Python?
 
@@ -94,12 +94,15 @@ lang: python
 xp: 50
 skills: 2
 key: 9703b117fb
+
+
+
 ```
 
 Python is a pretty versatile language. For which applications can you use Python?
 
 `@instructions`
-- You want to do some quick calculations.
+- You want to do some quick calculations.asdf
 - For your new business, you want to develop a database-driven website.
 - Your boss asks you to clean and analyze the results of the latest satisfaction survey.
 - All of the above.
@@ -112,6 +115,7 @@ Filip mentioned in the video that Python can be used to build practically any pi
 # pec comes here
 ```
 
+
 `@sct`
 ```{python}
 msg1 = "Incorrect. Python can do simple and quick calculations, but it is much more than that!"
@@ -119,8 +123,12 @@ msg2 = "Incorrect. There is a very popular framework to build database-driven we
 msg3 = "Incorrect. Python is a powerful tool to do data analysis, but you can also use it for other ends."
 msg4 = "Correct! Python is an extremely versatile language."
 test_mc(4, [msg1, msg2, msg3, msg4])
-
 ```
+
+
+
+
+
 
 ---
 ## Any comments?
@@ -131,6 +139,9 @@ lang: python
 xp: 100
 skills: 2
 key: 7c4a738a13
+
+
+
 ```
 
 Something that Filip didn't mention in his videos is that you can add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
@@ -147,7 +158,6 @@ For this exercise you only have to add one line of comments. It won't run as Pyt
 ```{python}
 # pec comes here
 ```
-
 `@sample_code`
 ```{python}
 # Just testing division
@@ -156,7 +166,6 @@ print(5 / 8)
 
 print(7 + 10)
 ```
-
 `@solution`
 ```{python}
 # Just testing division
@@ -165,12 +174,16 @@ print(5 / 8)
 # Addition works too
 print(7 + 10)
 ```
-
 `@sct`
 ```{python}
 test_student_typed("#\s*(\w+) works (\w+)[\s.!?]*print\(7", not_typed_msg = "Make sure to add the instructed comment right before `print(7+10)`.")
 success_msg("Great!")
 ```
+
+
+
+
+
 
 ---
 ## Python as a calculator
@@ -181,6 +194,9 @@ lang: python
 xp: 100
 skills: 2
 key: 0f7c039428
+
+
+
 ```
 
 Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations such as:
@@ -200,7 +216,6 @@ After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How muc
 ```{python}
 # pec comes here
 ```
-
 `@sample_code`
 ```{python}
 # Addition and subtraction
@@ -218,9 +233,7 @@ print(4 ** 2)
 print(18 % 7)
 
 # How much is your $100 worth after 7 years?
-
 ```
-
 `@solution`
 ```{python}
 # Addition and subtraction
@@ -240,12 +253,16 @@ print(18 % 7)
 # How much is your $100 worth after 7 years?
 print(100 * 1.1 ** 7)
 ```
-
 `@sct`
 ```{python}
 test_output_contains("194\\.8", no_output_msg = "Have you used the operation `100 * 1.1 ** 7` in a `print()` call?")
 success_msg("Time for another video!")
 ```
+
+
+
+
+
 
 ---
 ## Variables & Types
@@ -256,19 +273,15 @@ lang: python
 xp: 50
 skills: 2
 key: ef8356fb92
+video_link: //player.vimeo.com/video/154561704
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_2.master.m3u8
+
 ```
 
-`@video_link`
-//player.vimeo.com/video/154561704
-
-`@video_hls`
-//videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch1_2.master.m3u8
-
-*** =projector_key
+`@projector_key`
 7df0925250c5fb2a647cd76fb09d446e
 
 ---
-
 ## Variable Assignment
 
 ```yaml
@@ -277,6 +290,9 @@ lang: python
 xp: 100
 skills: 2
 key: 4bf65ad83e
+
+
+
 ```
 
 In Python, a variable allows you to refer to a value with a name. To create a variable use `=`, like this example:
@@ -301,16 +317,13 @@ Remember, `=` in Python means _assignment_, it doesn't test equality!
 ```{python}
 # pec
 ```
-
 `@sample_code`
 ```{python}
 # Create a variable savings
 
 
 # Print out savings
-
 ```
-
 `@solution`
 ```{python}
 # Create a variable savings
@@ -319,13 +332,17 @@ savings = 100
 # Print out savings
 print(savings)
 ```
-
 `@sct`
 ```{python}
 test_object("savings", incorrect_msg = "Assign `100` to the variable `savings`.")
 test_function("print", incorrect_msg = "Print out `savings`, the variable you created, using `print(savings)`.")
 success_msg("Great! Let's try to do some calculations with this variable now!")
 ```
+
+
+
+
+
 
 ---
 ## Calculations with variables
@@ -336,6 +353,9 @@ lang: python
 xp: 100
 skills: 2
 key: ff06cedeb4
+
+
+
 ```
 
 Remember how you calculated the money you ended up with after 7 years of investing $100? You did something like this:
@@ -360,7 +380,6 @@ Instead of calculating with the actual values, you can use variables instead. Th
 ```{python}
 # pec
 ```
-
 `@sample_code`
 ```{python}
 # Create a variable savings
@@ -374,7 +393,6 @@ savings = 100
 
 # Print out result
 ```
-
 `@solution`
 ```{python}
 # Create a variable savings
@@ -389,7 +407,6 @@ result = savings * factor ** 7
 # Print out result
 print(result)
 ```
-
 `@sct`
 ```{python}
 test_object("savings", undefined_msg = "The variable `savings` was defined for you, don't remove it!",
@@ -401,6 +418,11 @@ test_print(not_called_msg = msg, incorrect_msg = msg)
 success_msg("Great!")
 ```
 
+
+
+
+
+
 ---
 ## Other variable types
 
@@ -410,6 +432,9 @@ lang: python
 xp: 100
 skills: 2
 key: 006b48561f
+
+
+
 ```
 
 In the previous exercise, you worked with two Python data types:
@@ -434,16 +459,13 @@ Next to numerical data types, there are two other very common data types:
 ```{python}
 # pec
 ```
-
 `@sample_code`
 ```{python}
 # Create a variable desc
 
 
 # Create a variable profitable
-
 ```
-
 `@solution`
 ```{python}
 # Create a variable desc
@@ -452,7 +474,6 @@ desc = "compound interest"
 # Create a variable profitable
 profitable = True
 ```
-
 `@sct`
 ```{python}
 test_object("desc", incorrect_msg = "Assign the value `\"compound interest\"` to the variable `desc`.")
@@ -460,6 +481,11 @@ test_object("profitable", incorrect_msg = "Assign the value `True` to the variab
 
 success_msg("Nice!")
 ```
+
+
+
+
+
 
 ---
 ## Guess the type
@@ -470,6 +496,9 @@ lang: python
 xp: 50
 skills: 2
 key: b35f67514c
+
+
+
 ```
 
 To find out the type of a value or a variable that refers to that value, you can use the [`type()`](https://docs.python.org/3/library/functions.html#type) function. Suppose you've defined a variable `a`, but you forgot the type of this variable. To determine the type of `a`, simply execute:
@@ -496,6 +525,7 @@ b = "True"
 c = False
 ```
 
+
 `@sct`
 ```{python}
 msg1 = "The type of `a` is not `int`. Try out `type(a)` and see for yourself."
@@ -504,6 +534,11 @@ msg3 = "Correcto perfecto!"
 msg4 = "None of the variable's types is correct here. Try `type(a)` and see what type this variable is."
 test_mc(3,[msg1, msg2, msg3, msg4])
 ```
+
+
+
+
+
 
 ---
 ## Operations with other types
@@ -514,6 +549,9 @@ lang: python
 xp: 100
 skills: 2
 key: 4d0d83cc02
+
+
+
 ```
 
 Filip mentioned that different types behave differently in Python.
@@ -538,7 +576,6 @@ In the script some variables with different types have already been created. It'
 ```{python}
 # no pec
 ```
-
 `@sample_code`
 ```{python}
 # Several variables to experiment with
@@ -556,9 +593,7 @@ desc = "compound interest"
 
 
 # Print out doubledesc
-
 ```
-
 `@solution`
 ```{python}
 # Several variables to experiment with
@@ -578,7 +613,6 @@ doubledesc = desc + desc
 # Print out doubledesc
 print(doubledesc)
 ```
-
 `@sct`
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
@@ -594,6 +628,11 @@ test_function("print", 2, incorrect_msg = "Be sure to print out `doubledesc`.")
 success_msg("Nice. Notice how `desc + desc` causes `\"compound interest\"` and `\"compound interest\"` to be pasted together.")
 ```
 
+
+
+
+
+
 ---
 ## Type conversion
 
@@ -603,6 +642,9 @@ lang: python
 xp: 100
 skills: 2
 key: 085bb602b9
+
+
+
 ```
 
 Using the `+` operator to paste together two strings can be very useful in building custom messages.
@@ -632,7 +674,6 @@ Similar functions such as [`int()`](https://docs.python.org/3/library/functions.
 ```{python}
 # pec
 ```
-
 `@sample_code`
 ```{python}
 # Definition of savings and result
@@ -646,9 +687,7 @@ print("I started with $" + savings + " and now have $" + result + ". Awesome!")
 pi_string = "3.1415926"
 
 # Convert pi_string into float: pi_float
-
 ```
-
 `@solution`
 ```{python}
 # Definition of savings and result
@@ -664,10 +703,8 @@ pi_string = "3.1415926"
 # Convert pi_string into float: pi_float
 pi_float = float(pi_string)
 ```
-
 `@sct`
 ```{python}
-
 # ensure predefined values are unmodified
 msg = "You don't have to change or remove the predefined variables."
 test_object("savings", undefined_msg = msg, incorrect_msg = msg)
@@ -693,6 +730,11 @@ test_object("pi_float",
 success_msg("Great! You have a profit of around $95; that's pretty awesome indeed!")
 ```
 
+
+
+
+
+
 ---
 ## Can Python handle everything?
 
@@ -702,6 +744,9 @@ lang: python
 xp: 50
 skills: 2
 key: 3e5f0bdf3a
+
+
+
 ```
 
 Now that you know something more about combining different sources of information, have a look at the four Python expressions below.
@@ -721,9 +766,32 @@ Copy and paste the different expressions into the IPython Shell and try to figur
 # pec
 ```
 
+
 `@sct`
 ```{python}
 msg1 = msg2 = msg4 = "Incorrect, this command runs perfectly fine."
 msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
+
+
+
+
+
+
+---
+## Insert exercise title here
+
+```yaml
+type: VideoExercise
+
+xp: 50
+
+key: 4ddb8136e4
+
+
+
+```
+
+`@projector_key`
+160c685e3b3faf41cbc804233a68421d
