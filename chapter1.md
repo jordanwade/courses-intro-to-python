@@ -1,9 +1,9 @@
 ---
-  title_meta: "Chapter 1"
-  title: "Python Basics"
-  description: "An introduction to the basic concepts of Python. Learn how to use Python both interactively and through a script. Create your first variables and acquaint yourself with Python's basic data types."
-  attachments: 
-    slides_link: "https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch1_slides.pdf"
+title_meta: 'Chapter 1'
+title: 'Python Basics'
+description: 'An introduction to the basic concepts of Python. Learn how to use Python both interactively and through a script. Create your first variables and acquaint yourself with Python''s basic data types.'
+attachments:
+    slides_link: 'https://s3.amazonaws.com/assets.datacamp.com/course/intro_to_python/ch1_slides.pdf'
 ---
 
 ## Hello Python!
