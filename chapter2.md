@@ -9,29 +9,29 @@ attachments:
 ## Lists, what are they?
 
 ```yaml
-type: VideoExercise 
+type: VideoExercise
+key: f366e876d8
 lang: python
-xp: 50 
+xp: 50
 skills: 2
-key: f366e876d8 
-video_link: //player.vimeo.com/video/154563059 
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch2_1.master.m3u8 
+video_link: //player.vimeo.com/video/154563059
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v2/hls-ch2_1.master.m3u8
 ```
 
 `@projector_key`
 84258dc00ac8e6f277086d60255e8244
+
 ---
 
 ## Create a list
 
 ```yaml
-type: NormalExercise 
+type: NormalExercise
+key: e6c527bf41
 lang: python
-xp: 100 
+xp: 100
 skills: 2
-key: e6c527bf41   
 ```
-
 
 As opposed to `int`, `bool` etc., a list is a **compound data type**; you can group values together:
 
@@ -42,7 +42,6 @@ my_list = ["my", "list", a, b]
 ```
 
 After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables for now, as shown in the script.
-
 
 `@instructions`
 - Create a list, `areas`, that contains the area of the hallway (`hall`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
@@ -56,6 +55,7 @@ After measuring the height of your family, you decide to collect some informatio
 ```{python}
 # pec
 ```
+
 `@sample_code`
 ```{python}
 # area variables (in square meters)
@@ -70,6 +70,7 @@ bath = 9.50
 
 # Print areas
 ```
+
 `@solution`
 ```{python}
 # Area variables (in square meters)
@@ -85,6 +86,7 @@ areas = [hall, kit, liv, bed, bath]
 # Print areas
 print(areas)
 ```
+
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined variables!"
@@ -100,25 +102,24 @@ test_function("print", incorrect_msg = "Print out the `areas` list you created b
 
 success_msg("Nice! A list is way better here, isn't it?")
 ```
+
 ---
 
 ## Create list with different types
 
 ```yaml
-type: NormalExercise 
+type: NormalExercise
+key: 1702a8bcdc
 lang: python
-xp: 100 
+xp: 100
 skills: 2
-key: 1702a8bcdc   
 ```
-
 
 A list can contain any Python type. Although it's not really common, a list can also contain a mix of Python types including strings, floats, booleans, etc.
 
 The printout of the previous exercise wasn't really satisfying. It's just a list of numbers representing the areas, but you can't tell which area corresponds to which part of your house.
 
 The code on the right is the start of a solution. For some of the areas, the name of the corresponding room is already placed in front. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
-
 
 `@instructions`
 - Finish the line of code that creates the `areas` list such that the list first contains the name of each room as a string and then its area. More specifically, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
@@ -132,6 +133,7 @@ The code on the right is the start of a solution. For some of the areas, the nam
 ```{python}
 # pec
 ```
+
 `@sample_code`
 ```{python}
 # area variables (in square meters)
@@ -146,6 +148,7 @@ areas = [hall, kit, "living room", liv, bed, "bathroom", bath]
 
 # Print areas
 ```
+
 `@solution`
 ```{python}
 # area variables (in square meters)
@@ -161,6 +164,7 @@ areas = ["hallway", hall, "kitchen", kit, "living room", liv, "bedroom", bed, "b
 # Print areas
 print(areas)
 ```
+
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined variables!"
@@ -176,18 +180,18 @@ test_function("print")
 
 success_msg("Nice! This list contains both strings and floats, but that's not a problem for Python!")
 ```
+
 ---
 
 ## Select the valid list
 
 ```yaml
-type: MultipleChoiceExercise 
+type: MultipleChoiceExercise
+key: 416b80a405
 lang: python
-xp: 50 
+xp: 50
 skills: 2
-key: 416b80a405   
 ```
-
 
 A list can contain any Python type. But a list itself is also a Python type. That means that a list can also contain a list! Python is getting funkier by the minute, but fear not, just remember the list syntax:
 
@@ -201,8 +205,7 @@ A. `[1, 3, 4, 2]`
 B. `[[1, 2, 3], [4, 5, 7]]`
 C. `[1 + 2, "a" * 5, 3]`
 
-
-`@instructions`
+`@possible_answers`
 - A, B and C
 - B
 - B and C
@@ -215,6 +218,7 @@ Try out all the different lines in the Python shell and see which ones generate 
 ```{python}
 # pec
 ```
+
 `@sct`
 ```{python}
 msg1 = "Correct! As funny as they may look, all these commands are valid ways to build a Python list."
@@ -223,25 +227,24 @@ msg3 = "Both command B and C are valid; what about command A? Try it out in the 
 msg4 = "Command C is valid, but it's not the only one!"
 test_mc(1,[msg1,msg2,msg3,msg4])
 ```
+
 ---
 
 ## List of lists
 
 ```yaml
-type: NormalExercise 
+type: NormalExercise
+key: 9158c577b0
 lang: python
-xp: 100 
+xp: 100
 skills: 2
-key: 9158c577b0   
 ```
-
 
 As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
 
 Instead of creating a flat list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists. The script on the right can already give you an idea.
 
 Don't get confused here: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
-
 
 `@instructions`
 - Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order!
@@ -257,6 +260,7 @@ Don't get confused here: `"hallway"` is a string, while `hall` is a variable tha
 ```{python}
 # pec
 ```
+
 `@sample_code`
 ```{python}
 # area variables (in square meters)
@@ -276,6 +280,7 @@ house = [["hallway", hall],
 
 # Print out the type of house
 ```
+
 `@solution`
 ```{python}
 # area variables (in square meters)
@@ -298,6 +303,7 @@ print(house)
 # Print out the type of house
 print(type(house))
 ```
+
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined variables!"
@@ -317,34 +323,35 @@ test_function("type", not_called_msg = msg, incorrect_msg = msg)
 
 success_msg("Great! Get ready to learn about list subsetting!")
 ```
+
 ---
 
 ## Subsetting lists
 
 ```yaml
-type: VideoExercise 
+type: VideoExercise
+key: 9e15e5b8a0
 lang: python
-xp: 50 
+xp: 50
 skills: 2
-key: 9e15e5b8a0 
-video_link: //player.vimeo.com/video/146994264 
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_2.master.m3u8 
+video_link: //player.vimeo.com/video/146994264
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_2.master.m3u8
 ```
 
 `@projector_key`
 47e0948980f8c77be2071a892b32ec8b
+
 ---
 
 ## Subset and conquer
 
 ```yaml
-type: NormalExercise 
+type: NormalExercise
+key: c3ce582e32
 lang: python
-xp: 100 
+xp: 100
 skills: 2
-key: c3ce582e32   
 ```
-
 
 Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
 
@@ -355,7 +362,6 @@ x[-3] # same result!
 ```
 
 Remember the `areas` list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
-
 
 `@instructions`
 - Print out the second element from the `areas` list, so `11.25`.
@@ -371,6 +377,7 @@ Remember the `areas` list from before, containing both strings and floats? Its d
 ```{python}
 # pec
 ```
+
 `@sample_code`
 ```{python}
 # Create the areas list
@@ -384,6 +391,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 
 # Print out the area of the living room
 ```
+
 `@solution`
 ```{python}
 # Create the areas list
@@ -398,6 +406,7 @@ print(areas[-1])
 # Print out the area of the living room
 print(areas[5])
 ```
+
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
@@ -407,18 +416,18 @@ test_function("print", index = 2)
 test_function("print", index = 3)
 success_msg("Good job!")
 ```
+
 ---
 
 ## Subset and calculate
 
 ```yaml
-type: NormalExercise 
+type: NormalExercise
+key: 58c969f11f
 lang: python
-xp: 100 
+xp: 100
 skills: 2
-key: 58c969f11f   
 ```
-
 
 After you've extracted values from a list, you can use them to perform additional calculations. Take this example, where the second and fourth element of a list `x` are extracted. The strings that result are pasted together using the `+` operator:
 
@@ -426,7 +435,6 @@ After you've extracted values from a list, you can use them to perform additiona
 x = ["a", "b", "c", "d"]
 print(x[1] + x[3])
 ```
-
 
 `@instructions`
 - Using a combination of list subsetting and variable assignment, create a new variable, `eat_sleep_area`, that contains the sum of the area of the kitchen and the area of the bedroom.
@@ -440,6 +448,7 @@ print(x[1] + x[3])
 ```{python}
 # pec
 ```
+
 `@sample_code`
 ```{python}
 # Create the areas list
@@ -450,6 +459,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 
 # Print the variable eat_sleep_area
 ```
+
 `@solution`
 ```{python}
 # Create the areas list
@@ -461,6 +471,7 @@ eat_sleep_area = areas[3] + areas[-3]
 # Print the variable eat_sleep_area
 print(eat_sleep_area)
 ```
+
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
@@ -469,18 +480,18 @@ test_object("eat_sleep_area", incorrect_msg = "Be sure to assign the correct val
 test_function("print", incorrect_msg = "Print out the value you found, stored in `eat_sleep_area`. Use `print(eat_sleep_area)`.")
 success_msg("Bellissimo!")
 ```
+
 ---
 
 ## Slicing and dicing
 
 ```yaml
-type: NormalExercise 
+type: NormalExercise
+key: 7f08642d18
 lang: python
-xp: 100 
+xp: 100
 skills: 2
-key: 7f08642d18   
 ```
-
 
 Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
 
@@ -499,7 +510,6 @@ x[1:3]
 
 The elements with index 1 and 2 are included, while the element with index 3 is not.
 
-
 `@instructions`
 - Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
 - Do a similar thing to create a new variable, `upstairs`, that contains the last 4 elements of `areas`.
@@ -514,6 +524,7 @@ The elements with index 1 and 2 are included, while the element with index 3 is 
 ```{python}
 # no pec
 ```
+
 `@sample_code`
 ```{python}
 # Create the areas list
@@ -527,6 +538,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 
 # Print out downstairs and upstairs
 ```
+
 `@solution`
 ```{python}
 # Create the areas list
@@ -542,6 +554,7 @@ upstairs = areas[6:10]
 print(downstairs)
 print(upstairs)
 ```
+
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
@@ -555,18 +568,18 @@ test_function("print", 2, incorrect_msg = "First, print out `upstairs` using `pr
 
 success_msg("Great!")
 ```
+
 ---
 
 ## Slicing and dicing (2)
 
 ```yaml
-type: NormalExercise 
+type: NormalExercise
+key: dfc9a168a3
 lang: python
-xp: 100 
+xp: 100
 skills: 2
-key: dfc9a168a3   
 ```
-
 
 In the video, Filip first discussed the syntax where you specify both where to begin and end the slice of your list:
 
@@ -583,7 +596,6 @@ x[2:]
 x[:]
 ```
 
-
 `@instructions`
 Use slicing to create the lists `downstairs` and `upstairs` again, but this time without using indexes if it's not necessary. Remember `downstairs` is the first 6 elements of `areas` and `upstairs` is the last 4 elements of `areas`.
 
@@ -594,6 +606,7 @@ To build `downstairs`, you can use `[:6]`. To build `upstairs`, you can use `[6:
 ```{python}
 # pec
 ```
+
 `@sample_code`
 ```{python}
 # Create the areas list
@@ -604,6 +617,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 
 # Alternative slicing to create upstairs
 ```
+
 `@solution`
 ```{python}
 # Create the areas list
@@ -615,6 +629,7 @@ downstairs = areas[:6]
 # Alternative slicing to create upstairs
 upstairs = areas[6:]
 ```
+
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
@@ -629,18 +644,18 @@ test_student_typed("\[\\s*(6|-4):\\s*\]", not_typed_msg = msg % ("upstairs","6:"
 
 success_msg("Wonderful!")
 ```
+
 ---
 
 ## Subsetting lists of lists
 
 ```yaml
-type: MultipleChoiceExercise 
+type: MultipleChoiceExercise
+key: dbbbd306cf
 lang: python
-xp: 50 
+xp: 50
 skills: 2
-key: dbbbd306cf   
 ```
-
 
 You saw before that a Python list can contain practically anything; even other lists! To subset lists of lists, you can use the same technique as before: square brackets. Try out the commands in the following code sample in the IPython Shell:
 
@@ -656,8 +671,7 @@ x[2][:2]
 
 What will `house[-1][1]` return? `house`, the list of lists that you created before, is already defined for you in the workspace. You can experiment with it in the IPython Shell.
 
-
-`@instructions`
+`@possible_answers`
 - A float: the kitchen area
 - A string: `"kitchen"`
 - A float: the bathroom area
@@ -674,6 +688,7 @@ house = [["hallway", 11.25],
          ["bedroom", 10.75],
          ["bathroom", 9.50]]
 ```
+
 `@sct`
 ```{python}
 msg1 = msg2 = "Wrong. `house[-1]` selects the last element of `house`, which is the list `[\"bathroom\", 9.50]`."
@@ -681,34 +696,35 @@ msg3 = "Correctomundo! The last piece of the list puzzle is manipulation."
 msg4 = "Incorrect. `house[-1]` indeed selects the list that represents the bathroom information, but `[1]` selects the second element of the sublist, not the first. Python uses zero-based indexing!"
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
+
 ---
 
 ## List Manipulation
 
 ```yaml
-type: VideoExercise 
+type: VideoExercise
+key: fbdaaec22a
 lang: python
-xp: 50 
+xp: 50
 skills: 2
-key: fbdaaec22a 
-video_link: //player.vimeo.com/video/149289041 
-video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_3.master.m3u8 
+video_link: //player.vimeo.com/video/149289041
+video_hls: //videos.datacamp.com/transcoded/735_intro_to_python/v1/hls-ch2_3.master.m3u8
 ```
 
 `@projector_key`
 823af3a8a05cb88df3f2b0dca71cec7f
+
 ---
 
 ## Replace list elements
 
 ```yaml
-type: NormalExercise 
+type: NormalExercise
+key: 4e1bba1b55
 lang: python
-xp: 100 
+xp: 100
 skills: 2
-key: 4e1bba1b55   
 ```
-
 
 Replacing list elements is pretty easy. Simply subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
 
@@ -722,7 +738,6 @@ x[2:] = ["s", "t"]
 
 For this and the following exercises, you'll continue working on the `areas` list that contains the names and areas of different rooms in a house.
 
-
 `@instructions`
 - You did a miscalculation when determining the area of the bathroom; it's 10.50 square meters instead of 9.50. Can you make the changes?
 - Make the `areas` list more trendy! Change "living room" to "chill zone".
@@ -735,6 +750,7 @@ For this and the following exercises, you'll continue working on the `areas` lis
 ```{python}
 # pec
 ```
+
 `@sample_code`
 ```{python}
 # Create the areas list
@@ -745,6 +761,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 
 # Change "living room" to "chill zone"
 ```
+
 `@solution`
 ```{python}
 # Create the areas list
@@ -756,24 +773,25 @@ areas[-1] = 10.50
 # Change "living room" to "chill zone"
 areas[4] = "chill zone"
 ```
+
 `@sct`
 ```{python}
 test_object("areas",
             incorrect_msg = "Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!")
 success_msg("Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.")
 ```
+
 ---
 
 ## Extend a list
 
 ```yaml
-type: NormalExercise 
+type: NormalExercise
+key: ff0fe8d967
 lang: python
-xp: 100 
+xp: 100
 skills: 2
-key: ff0fe8d967   
 ```
-
 
 If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
 
@@ -783,7 +801,6 @@ y = x + ["e", "f"]
 ```
 
 You just won the lottery, awesome! You decide to build a poolhouse and a garage. Can you add the information to the `areas` list?
-
 
 `@instructions`
 - Use the `+` operator to paste the list `["poolhouse", 24.5]` to the end of the `areas` list. Store the resulting list as `areas_1`.
@@ -797,6 +814,7 @@ You just won the lottery, awesome! You decide to build a poolhouse and a garage.
 ```{python}
 # pec
 ```
+
 `@sample_code`
 ```{python}
 # Create the areas list and make some changes
@@ -808,6 +826,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
 
 # Add garage data to areas_1, new list is areas_2
 ```
+
 `@solution`
 ```{python}
 # Create the areas list (updated version)
@@ -820,6 +839,7 @@ areas_1 = areas + ["poolhouse", 24.5]
 # Add garage data to areas_1, new list is areas_2
 areas_2 = areas_1 + ["garage", 15.45]
 ```
+
 `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
@@ -828,18 +848,18 @@ test_object("areas_1", incorrect_msg = "Use the '+' operator to add `[\"poolhous
 test_object("areas_2", incorrect_msg = "Use the '+' operator to add `[\"garage\", 15.45]` to `areas_2`. Watch out for typos.")
 success_msg("Cool! The list is shaping up nicely!")
 ```
+
 ---
 
 ## Delete list elements
 
 ```yaml
-type: MultipleChoiceExercise 
+type: MultipleChoiceExercise
+key: 85f792356e
 lang: python
-xp: 50 
+xp: 50
 skills: 2
-key: 85f792356e   
 ```
-
 
 Finally, you can also remove elements from your list. You can do this with the `del` statement:
 
@@ -874,8 +894,7 @@ command2
 
 Which of the code chunks will do the job for us?
 
-
-`@instructions`
+`@possible_answers`
 - `del(areas[10]); del(areas[11])`
 - `del(areas[10:11])`
 - `del(areas[-4:-2])`
@@ -891,31 +910,31 @@ areas = ["hallway", 11.25, "kitchen", 18.0,
          "bathroom", 10.50, "poolhouse", 24.5,
          "garage", 15.45]
 ```
+
 `@sct`
 ```{python}
 msg1 = msg2 = msg4 = "This code chunk will not correctly remove the poolhouse-related information. Try again."
 msg3 = "Correct! You'll learn about easier ways to remove specific elements from Python lists later on."
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
+
 ---
 
 ## Inner workings of lists
 
 ```yaml
-type: NormalExercise 
+type: NormalExercise
+key: af72db9915
 lang: python
-xp: 100 
+xp: 100
 skills: 2
-key: af72db9915   
 ```
-
 
 At the end of the video, Filip explained how Python lists work behind the scenes. In this exercise you'll get some hands-on experience with this.
 
 The Python code in the script already creates a list with the name `areas` and a copy named `areas_copy`. Next, the first element in the `areas_copy` list is changed and the `areas` list is printed out. If you hit _Run Code_ you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
 
 If you want to prevent changes in `areas_copy` to also take effect in `areas`, you'll have to do a more explicit copy of the `areas` list. You can do this with [`list()`](https://docs.python.org/3/library/functions.html#func-list) or by using `[:]`.
-
 
 `@instructions`
 - Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`
@@ -928,6 +947,7 @@ Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assi
 ```{python}
 # no pec
 ```
+
 `@sample_code`
 ```{python}
 # Create list areas
@@ -942,6 +962,7 @@ areas_copy[0] = 5.0
 # Print areas
 print(areas)
 ```
+
 `@solution`
 ```{python}
 # Create list areas
@@ -956,6 +977,7 @@ areas_copy[0] = 5.0
 # Print areas
 print(areas)
 ```
+
 `@sct`
 ```{python}
 test_object("areas", undefined_msg = "Don't remove the predefined `areas` list.",
